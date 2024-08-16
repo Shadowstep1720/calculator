@@ -37,6 +37,9 @@ function operate(inputArray) {
             inputArray.unshift(multiply(number1, number2));
             break;
         case "/":
+            if (number2 === 0) {
+                return ["oops, can't divide by zero"]
+            }
             inputArray.unshift(divide(number1, number2));
             break;
         case "^":
